@@ -1,0 +1,45 @@
+The bank structure follows the riff file format.
+Below are the chunks located in a bank file.
+They must appear in order and follow riff convention.
+
+<RIFF>
+Size = Int32
+Type = "BANK"
+
+<INFO>
+Size = Int32
+Version = (float)
+Comments = (string)
+
+<LIST>
+Size = Int32
+Type = "ASET"
+
+<SMPL> (0 or more of these)
+Size = Int32
+Name = (string) 20 byte size
+SampleRate = (int)
+RootKey = (short)
+Tune = (short)
+LoopStart = (double)
+LoopEnd = (double)
+BitDepth = (byte)
+Channels = (byte)
+Data = (byte[]) - samples in 16bit format
+
+<LIST>
+Size = Int32
+Type = "INST"
+
+<PTCH> (0 or more of these)
+Size = Int32
+Name = (string) 20 byte size
+Type = (string 4 one byte chars)
+DesCount = (short)
+<Evlp,lfo , fltr, or gen > (any of the descriptor chunks)
+Size = Int32
+... (what follows depends on the preceeding descriptor id.)
+RangeCount = (short)
+BankNum = (short)
+StartRange = (byte)
+EndRange = (byte)

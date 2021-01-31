@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{78B9DAD0-91EF-4226-B3C8-2F05C15BB9D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AudioSynthesis</RootNamespace>
+    <AssemblyName>AudioSynthesis</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\Debug\vs2012\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bin\Release\vs2012\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Sources\Bank\AssetManager.cs">
+      <Link>Bank\AssetManager.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Components\Effects\Chorus.cs">
+      <Link>Bank\Components\Effects\Chorus.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Components\Effects\Delay.cs">
+      <Link>Bank\Components\Effects\Delay.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Components\Effects\Flanger.cs">
+      <Link>Bank\Components\Effects\Flanger.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Components\Effects\IAudioEffect.cs">
+      <Link>Bank\Components\Effects\IAudioEffect.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Components\Enum.cs">
+      <Link>Bank\Components\Enum.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Components\Envelope.cs">
+      <Link>Bank\Components\Envelope.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Components\Filter.cs">
+      <Link>Bank\Components\Filter.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Components\Generators\Generator.cs">
+      <Link>Bank\Components\Generators\Generator.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Components\Generators\GeneratorParameters.cs">
+      <Link>Bank\Components\Generators\GeneratorParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Components\Generators\SampleGenerator.cs">
+      <Link>Bank\Components\Generators\SampleGenerator.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Components\Generators\SawGenerator.cs">
+      <Link>Bank\Components\Generators\SawGenerator.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Components\Generators\SineGenerator.cs">
+      <Link>Bank\Components\Generators\SineGenerator.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Components\Generators\SquareGenerator.cs">
+      <Link>Bank\Components\Generators\SquareGenerator.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Components\Generators\TriangleGenerator.cs">
+      <Link>Bank\Components\Generators\TriangleGenerator.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Components\Generators\WhiteNoiseGenerator.cs">
+      <Link>Bank\Components\Generators\WhiteNoiseGenerator.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Components\Lfo.cs">
+      <Link>Bank\Components\Lfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\DescriptorList.cs">
+      <Link>Bank\DescriptorList.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Descriptors\CustomDescriptor.cs">
+      <Link>Bank\Descriptors\CustomDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Descriptors\EnvelopeDescriptor.cs">
+      <Link>Bank\Descriptors\EnvelopeDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Descriptors\FilterDescriptor.cs">
+      <Link>Bank\Descriptors\FilterDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Descriptors\GeneratorDescriptor.cs">
+      <Link>Bank\Descriptors\GeneratorDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Descriptors\IDescriptor.cs">
+      <Link>Bank\Descriptors\IDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Descriptors\LfoDescriptor.cs">
+      <Link>Bank\Descriptors\LfoDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\PatchAsset.cs">
+      <Link>Bank\PatchAsset.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\PatchBank.cs">
+      <Link>Bank\PatchBank.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Patches\BasicPatch.cs">
+      <Link>Bank\Patches\BasicPatch.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Patches\Fm2Patch.cs">
+      <Link>Bank\Patches\Fm2Patch.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Patches\MultiPatch.cs">
+      <Link>Bank\Patches\MultiPatch.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Patches\Patch.cs">
+      <Link>Bank\Patches\Patch.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Patches\Sf2Patch.cs">
+      <Link>Bank\Patches\Sf2Patch.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\Patches\SfzPatch.cs">
+      <Link>Bank\Patches\SfzPatch.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Bank\SampleDataAsset.cs">
+      <Link>Bank\SampleDataAsset.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\CrossPlatformHelper.cs">
+      <Link>CrossPlatformHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Midi\Event\MetaDataEvent.cs">
+      <Link>Midi\Event\MetaDataEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Midi\Event\MetaEvent.cs">
+      <Link>Midi\Event\MetaEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Midi\Event\MetaNumberEvent.cs">
+      <Link>Midi\Event\MetaNumberEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Midi\Event\MetaTextEvent.cs">
+      <Link>Midi\Event\MetaTextEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Midi\Event\MidiEvent.cs">
+      <Link>Midi\Event\MidiEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Midi\Event\RealTimeEvent.cs">
+      <Link>Midi\Event\RealTimeEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Midi\Event\SystemCommonEvent.cs">
+      <Link>Midi\Event\SystemCommonEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Midi\Event\SystemExclusiveEvent.cs">
+      <Link>Midi\Event\SystemExclusiveEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Midi\MidiFile.cs">
+      <Link>Midi\MidiFile.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Midi\MidiHelper.cs">
+      <Link>Midi\MidiHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Midi\MidiTrack.cs">
+      <Link>Midi\MidiTrack.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sequencer\MidiFileSequencer.cs">
+      <Link>Sequencer\MidiFileSequencer.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sequencer\MidiInputSequencer.cs">
+      <Link>Sequencer\MidiInputSequencer.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\Chunks\GeneratorChunk.cs">
+      <Link>Sf2\Chunks\GeneratorChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\Chunks\InstrumentChunk.cs">
+      <Link>Sf2\Chunks\InstrumentChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\Chunks\ModulatorChunk.cs">
+      <Link>Sf2\Chunks\ModulatorChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\Chunks\PresetHeaderChunk.cs">
+      <Link>Sf2\Chunks\PresetHeaderChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\Chunks\SampleHeaderChunk.cs">
+      <Link>Sf2\Chunks\SampleHeaderChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\Chunks\ZoneChunk.cs">
+      <Link>Sf2\Chunks\ZoneChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\Enum.cs">
+      <Link>Sf2\Enum.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\Generator.cs">
+      <Link>Sf2\Generator.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\Instrument.cs">
+      <Link>Sf2\Instrument.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\Modulator.cs">
+      <Link>Sf2\Modulator.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\ModulatorType.cs">
+      <Link>Sf2\ModulatorType.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\PresetHeader.cs">
+      <Link>Sf2\PresetHeader.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\SampleHeader.cs">
+      <Link>Sf2\SampleHeader.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\Sf2Region.cs">
+      <Link>Sf2\Sf2Region.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\SoundFont.cs">
+      <Link>Sf2\SoundFont.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\SoundFontInfo.cs">
+      <Link>Sf2\SoundFontInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\SoundFontPresets.cs">
+      <Link>Sf2\SoundFontPresets.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\SoundFontSampleData.cs">
+      <Link>Sf2\SoundFontSampleData.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sf2\Zone.cs">
+      <Link>Sf2\Zone.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sfz\SfzReader.cs">
+      <Link>Sfz\SfzReader.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Sfz\SfzRegion.cs">
+      <Link>Sfz\SfzRegion.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Synthesis\Synthesizer.Constants.cs">
+      <Link>Synthesis\Synthesizer.Constants.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Synthesis\Synthesizer.cs">
+      <Link>Synthesis\Synthesizer.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Synthesis\Synthesizer.MidiControl.cs">
+      <Link>Synthesis\Synthesizer.MidiControl.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Synthesis\SynthHelper.cs">
+      <Link>Synthesis\SynthHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Synthesis\Voice.cs">
+      <Link>Synthesis\Voice.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Synthesis\VoiceManager.cs">
+      <Link>Synthesis\VoiceManager.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Synthesis\VoiceParameters.cs">
+      <Link>Synthesis\VoiceParameters.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\IOHelper.cs">
+      <Link>Util\IOHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\PitchShift.cs">
+      <Link>Util\PitchShift.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\Riff\Chunk.cs">
+      <Link>Util\Riff\Chunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\Riff\CueChunk.cs">
+      <Link>Util\Riff\CueChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\Riff\DataChunk.cs">
+      <Link>Util\Riff\DataChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\Riff\FactChunk.cs">
+      <Link>Util\Riff\FactChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\Riff\FormatChunk.cs">
+      <Link>Util\Riff\FormatChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\Riff\InstrumentChunk.cs">
+      <Link>Util\Riff\InstrumentChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\Riff\LabelChunk.cs">
+      <Link>Util\Riff\LabelChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\Riff\LabeledTextChunk.cs">
+      <Link>Util\Riff\LabeledTextChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\Riff\ListChunk.cs">
+      <Link>Util\Riff\ListChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\Riff\NoteChunk.cs">
+      <Link>Util\Riff\NoteChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\Riff\PlaylistChunk.cs">
+      <Link>Util\Riff\PlaylistChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\Riff\RiffTypeChunk.cs">
+      <Link>Util\Riff\RiffTypeChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\Riff\SamplerChunk.cs">
+      <Link>Util\Riff\SamplerChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\Riff\UnknownChunk.cs">
+      <Link>Util\Riff\UnknownChunk.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\Tables.cs">
+      <Link>Util\Tables.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Util\TimeStretch.cs">
+      <Link>Util\TimeStretch.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Wave\WaveFile.cs">
+      <Link>Wave\WaveFile.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Wave\WaveFileReader.cs">
+      <Link>Wave\WaveFileReader.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Wave\WaveFileWriter.cs">
+      <Link>Wave\WaveFileWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\Sources\Wave\WaveHelper.cs">
+      <Link>Wave\WaveHelper.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

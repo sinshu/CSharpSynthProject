@@ -1,0 +1,8 @@
+[PATCHBANK]
+<COMMENT>A simple demo bank</COMMENT>
+<PATCHPATH></PATCHPATH>
+<ASSETPATH>SAMPLES</ASSETPATH>
+<PATCHES>
+fmstarter.patch/0/127/i
+NoiseDrum.patch/0/127/d
+</PATCHES>

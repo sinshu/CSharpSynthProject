@@ -1,0 +1,37 @@
+PATCH v1.000
+fm2
+
+<fm2c>
+cIndex = 1d,
+mIndex = 1d,
+feedback = 0d,
+sync = soft&
+</fm2c>
+
+<GENERATOR>
+type = whitenoise,
+loopmode = continuous
+</GENERATOR>
+
+<ENVELOPE>
+attacktime = .001,
+releasetime = .2,
+releasemode = exp,
+sustaintime = 0,
+attacklevel = .40
+</ENVELOPE>
+
+<GENERATOR>
+type = sine,
+loopmode = continuous
+</GENERATOR>
+
+<ENVELOPE>
+attacktime = .001,
+releasetime = .2,
+sustaintime = 0,
+attacklevel = 1
+</ENVELOPE>
+
+<LFO>
+</LFO>
